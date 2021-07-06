@@ -1,7 +1,7 @@
 # WebLog
 ## General info
 A server side rendering (SSR) weblog with Node.js
-
+MongoDB has been used as database
 ## Technologies
  Project is created with:
  *   app-root-path   "3.0.0"
