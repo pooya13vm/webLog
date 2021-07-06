@@ -9,7 +9,7 @@ const transportDetails = smtpTransport({
   secure: true,
   auth: {
     user: "pooya13vm@gmail.com",
-    pass: "Moghadam14",
+    pass: "*****",
   },
   tls: {
     rejectUnauthorized: false,
