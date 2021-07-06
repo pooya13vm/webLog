@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link href="/css/dashboard.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.16.1/ckeditor.js"
+      integrity="sha512-2nFxKVmFuBhAR45DBnAANBjtxzf7z0m6wRU7NOquxibA6efrQpUtdjFT4wzqewqTI3/cCNbBzJNUtu1NxjFiKw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <header
+      class="
+        navbar navbar-dark
+        sticky-top
+        bg-dark
+        flex-md-nowrap
+        p-0
+        shadow
+        mb-3
+      "
+    >
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"
+        >hello <%= fullName %>
+      </a>
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form action="dashboard/search" method="POST" class="w-100">
+        <input
+          class="form-control form-control-dark"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+          name="search"
+        />
+      </form>
+
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="/users/logout">Sign out</a>
+        </div>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <%- include("../private/dashSideBar.ejs") %>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><%- body %></main>
+      </div>
+    </div>
+    <% if(path === "/dashboard/add-post") {%>
+    <script src="/js/upload.js"></script>
+    <% } %>
+    <script>
+      CKEDITOR.replace("body", {
+        language: "en",
+        uiColor: "#fefefe",
+        extraPlugins: "autogrow",
+      });
+    </script>
+    <script
+      src="/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

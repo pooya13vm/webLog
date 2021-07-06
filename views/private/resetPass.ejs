@@ -1,0 +1,31 @@
+<form
+  class="form-signin"
+  id="logonForm"
+  action="/users/reset-pass/<%= userId %> "
+  method="POST"
+>
+  <H1 class="h3 mb-3 font-weight-normal">Change password</H1>
+  <%- include("../includes/loginMessages.ejs") %>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input
+    type="password"
+    name="password"
+    id="inputPassword"
+    class="form-control mb-2"
+    placeholder="password"
+    required
+    autofocus
+  />
+  <label for="inputConfirmPassword" class="sr-only">Repeat Password</label>
+  <input
+    type="password"
+    name="confirmPassword"
+    id="inputConfirmPassword"
+    class="form-control mb-2"
+    placeholder="Repeat password"
+    required
+  />
+  <button class="btn btn-primary btn-bllock" type="submit">
+    Reset password
+  </button>
+</form>

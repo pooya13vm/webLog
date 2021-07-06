@@ -1,0 +1,15 @@
+<%- include("./includes/navbar.ejs") %>
+<header class="py-5 bg-light border-bottom mb-4">
+  <div class="container">
+    <div class="text-center my-5">
+      <h1 class="fw-bolder">Welcome to Blog Home!</h1>
+      <p class="lead mb-0">It is a Blog for JavaScript programmers</p>
+    </div>
+  </div>
+</header>
+<div class="container w-50">
+  <!-- Featured blog post-->
+  <%- include("./includes/blogPost.ejs") %>
+  <!-- pagination -->
+  <%- include("./includes/pagination") %>
+</div>

@@ -1,0 +1,21 @@
+<% if(posts.length > 0) {%> <% for(let post of posts) {%>
+<div class="card mb-4">
+  ><img
+    class="card-img-top"
+    src="http://localhost:3000/uploads/thumbnails/<%= post.thumbnail %> "
+    alt="..."
+  />
+  <div class="card-body">
+    <div class="small text-muted">
+      Posted at : <%= dateformat(post.createdAt) %>
+    </div>
+    <h2 class="card-title"><%= post.title %></h2>
+    <p class="card-text"><%- truncate(post.body,500) %></p>
+    <a class="btn btn-primary" href="/post/<%= post._id %>">Read more →</a>
+  </div>
+</div>
+<% } %> <% }else{ %>
+<div class="m-5 text-center">
+  <h1>There is not any post</h1>
+</div>
+<% } %>

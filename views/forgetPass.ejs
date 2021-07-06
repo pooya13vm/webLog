@@ -1,0 +1,22 @@
+<form
+  class="form-signin"
+  id="logonForm"
+  action="/users/forget-pass"
+  method="POST"
+>
+  <H1 class="h3 mb-3 font-weight-normal">Password forgot</H1>
+  <%- include("./includes/loginMessages.ejs") %>
+  <label for="inputEmail" class="sr-only">email address</label>
+  <input
+    type="email"
+    name="email"
+    id="inputEmail"
+    class="form-control mb-2"
+    placeholder="Inter your email address"
+    required
+    autofocus
+  />
+  <button class="btn btn-primary btn-bllock" type="submit">
+    Reset password
+  </button>
+</form>

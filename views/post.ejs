@@ -1,0 +1,22 @@
+<%- include("./includes/navbar.ejs") %>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h1 class="mt-4"><%= post.title %></h1>
+      <p class="lead">Author : <a href="#"><%= post.user.fullname %></a></p>
+      <hr />
+      <P>Publish time: <%= dateformat(post.createdAt) %> </P>
+      <hr />
+      <div class="text-center">
+        <img
+          src="http://localhost:3000/uploads/thumbnails/<%= post.thumbnail %>"
+          alt=".."
+          class="img-thumbnail"
+        />
+      </div>
+      <hr />
+      <p class="text-justify"><%- post.body %></p>
+      <hr />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<body class="text-center">
+  <main class="form-signin">
+    <form action="/users/login" method="POST">
+      <img
+        class="mb-4"
+        src="https://www.nicepng.com/png/full/138-1388174_login-account-icon.png"
+        alt=""
+        width="100"
+      />
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <%- include("./includes/loginMessages.ejs") %>
+      <div class="form-floating">
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" name="remember-me" />
+          Remember me
+        </label>
+      </div>
+      <div class="mb-3">
+        <a href="/users/register">Sign up</a>
+      </div>
+      <div class="mb-3">
+        <a href="/users/forget-pass">I forgot my password</a>
+      </div>
+      <div class="my-3">
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LcGm2MbAAAAAL-C2S30cmi2vGHMi44Gp2tINpqB"
+        ></div>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        Sign in
+      </button>
+    </form>
+  </main>
+</body>

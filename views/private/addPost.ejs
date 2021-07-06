@@ -1,0 +1,99 @@
+<h3 class="my-3 text-center">Make a new post</h3>
+<div class="w-50 mx-auto">
+  <%- include("../includes/validationErrors.ejs") %>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+  <form
+    action="/dashboard/add-post"
+    class="w-50"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <label for="selectedThumbnail">Thumbnail image : (require)</label>
+    <div class="input-group mb-3">
+      <input
+        type="file"
+        class="form-control"
+        name="thumbnail"
+        id="selectedThumbnail"
+      />
+      <label
+        id="thumbStatus"
+        class="px-3 pt-2 bg-light"
+        for="inputGroupFileAddon03"
+        >choose image</label
+      >
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="title">Post title : (require)</label>
+      <input type="text" class="form-control w-50" name="title" id="title" />
+    </div>
+    <div class="form-group mb-2">
+      <label for="status">Status : (require)</label>
+      <select name="status" class="form-control w-25" id="status">
+        <option value="public" selected>Public</option>
+        <option value="private">Private</option>
+      </select>
+    </div>
+
+    <label class="mt-2"
+      >For using image in post you must upload it first (only jpg files are
+      available) and then use the url in editor</label
+    >
+    <div class="mb-3 input-group">
+      <input
+        type="button"
+        class="btn btn-outline-secondary"
+        value="Upload image"
+        id="imageUpload"
+      />
+      <input
+        class="form-control"
+        type="file"
+        id="selectedImage"
+        value="Choose image"
+      />
+      <label type="button" class="px-3 pt-2 bg-light" id="imageStatus"></label>
+    </div>
+
+    <div id="progressDev" style="display: none">
+      <div class="progress mb-1">
+        <div
+          id="progressBar"
+          class="
+            progress-bar progress-bar-striped
+            bg-warning
+            progress-bar-animated
+          "
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+
+    <div>
+      <p id="uploadResult"></p>
+    </div>
+
+    <label
+      for="selectedImage"
+      class="form-label bg-warning px-2 rounded-3"
+      id="imageStatus"
+    ></label>
+
+    <div class="form-group">
+      <h5>Post Content : (required)</h5>
+      <textarea name="body" class="form-control" id="body"></textarea>
+    </div>
+    <div class="row">
+      <input
+        type="submit"
+        value="make post"
+        class="btn btn-success m-2 col-2"
+      />
+      <a href="/dashboard" class="btn btn-warning m-2 col-2">cancel</a>
+    </div>
+  </form>
+</div>
