@@ -41,5 +41,9 @@ To run this project, install it locally using npm:
 - $ npm install
 - $ npm run dev (development mode)
 - $ npm start (production mode)
-
+***
 ![alt text](https://github.com/pooya13vm/webLog/blob/main/githubimgs/1.png)
+![alt text](https://github.com/pooya13vm/webLog/blob/main/githubimgs/2.png)
+![alt text](https://github.com/pooya13vm/webLog/blob/main/githubimgs/3.png)
+![alt text](https://github.com/pooya13vm/webLog/blob/main/githubimgs/4.png)
+![alt text](https://github.com/pooya13vm/webLog/blob/main/githubimgs/5.png)
