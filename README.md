@@ -25,4 +25,4 @@ To run this project, install it locally using npm:
 - $ npm start
 ***
 ![alt text](https://github.com/pooya13vm/admindashboard/githubImg/screen1.png)
-admindashboard/githubImg/Screen Shot 2022-06-26 at 18.41.01.png
+
